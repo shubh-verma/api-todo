@@ -1,26 +1,30 @@
 {
-  "name": "api-todo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shubh-verma/api-todo.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shubh-verma/api-todo/issues"
-  },
-  "homepage": "https://github.com/shubh-verma/api-todo#readme",
-  "devDependencies": {
-    "@types/node": "^20.11.10",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "typeorm": "^0.3.20"
-  }
+   "name": "api-todo",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "ts-node src/index.ts",
+      "typeorm": "typeorm-ts-node-commonjs"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/shubh-verma/api-todo.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/shubh-verma/api-todo/issues"
+   },
+   "homepage": "https://github.com/shubh-verma/api-todo#readme",
+   "devDependencies": {
+      "@types/node": "^16.11.10",
+      "typescript": "4.5.2",
+      "ts-node": "10.9.1"
+   },
+   "dependencies": {
+      "typeorm": "0.3.20",
+      "reflect-metadata": "^0.1.13"
+   }
 }
