@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/shubh-verma/api-todo#readme",
   "devDependencies": {
+    "@types/node": "^20.11.10",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "typeorm": "^0.3.20"
   }
 }
