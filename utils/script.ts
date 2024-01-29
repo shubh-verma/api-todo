@@ -16,3 +16,4 @@ export class User {
     @Column()
     age: number
 }
+
