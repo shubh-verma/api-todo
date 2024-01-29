@@ -1,12 +1,8 @@
 import { AppDataSource } from "./data-source";
 import { User } from "./entity/User";
 
-const addUser = async () => {
+const addUser = async (user: User) => {
   console.log("Inserting a new user into the database...");
-  const user = new User();
-  user.firstName = "Timber";
-  user.lastName = "Saw";
-  user.age = 25;
   await AppDataSource.manager.save(user);
   console.log("Saved a new user with id: " + user.id);
   console.log("Loading users from the database...");
@@ -17,11 +13,14 @@ const addUser = async () => {
   );
 };
 
-
+const firstUser = new User();
+firstUser.firstName = "Timber";
+firstUser.lastName = "Saw";
+firstUser.age = 25;
 
 
 AppDataSource.initialize()
   .then(async () => {
-    await addUser();
+    await addUser(firstUser);
   })
   .catch((error) => console.log(error));
