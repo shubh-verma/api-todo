@@ -1,7 +1,8 @@
 import { AppDataSource } from "./data-source";
 import { User } from "./entity/User";
+import * as argon2 from "argon2";
 
-const newUser = async (user) => {
+const newUser = async (user: User) => {
   console.log("Inserting a new user into the database...");
 
   await AppDataSource.manager.save(user);
@@ -19,7 +20,8 @@ const newUser = async (user) => {
 const fUser = new User();
 fUser.firstName = "Timber";
 fUser.lastName = "Saw";
-fUser.age = 25;
+fUser.password = "qwerty";
+fUser.hashedPassword = await argon2.hash(fUser.password);
 
 AppDataSource.initialize()
   .then(async () => {
