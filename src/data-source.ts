@@ -8,4 +8,6 @@ export const AppDataSource = new DataSource({
     entities: [User],
     migrations: [],
     subscribers: [],
+    type: "sqlite",
+    database: "app.db",
 })
